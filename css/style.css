@@ -1,0 +1,109 @@
+/* Corps de la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('../img/iki.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: relative;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    color: aliceblue;
+}
+
+/* Menu caché par défaut */
+.menu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px; /* sous le hamburger */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Menu visible */
+.menu.active {
+    display: block;
+}
+
+/* Liens du menu */
+.menu a {
+    color: rgb(231, 118, 226);
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Bouton hamburger */
+.hamburger {
+    color: rgb(231, 118, 226);
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    user-select: none; /* empêche de sélectionner le texte par erreur */
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* léger fond pour lire sur le bg image */
+    margin: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px); 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(78, 73, 73);
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 14px;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        font-size: 26px;
+        padding: 8px;
+        flex-direction: column;
+
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 12px 0;
+        display: flex;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+}
