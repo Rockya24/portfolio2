@@ -1,34 +1,182 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio de Rockya</title>
- <!--lien css-->
-  <link rel="stylesheet" href="css/style.css" />
-  <!--lien boxicon-->
-  <link w w href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-
- 
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de RK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./portfolio.js"></script>
 </head>
 <body>
-  <div id="header">
- <nav>
-  <img src="img/logo.png" alt="logo">
-   <ul>
-    <li><a href="#">Acceuil</a></li>
-    <li><a href="#">A propos</a></li>
-    <li><a href="#">Projets</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  </div>
-  <div class="image-container">
-    <img src="acc.png" alt="imgacc">
-  </div>
- </nav>
-</body>
+    <!-- -------header------------ -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/logo.png" alt="logo">
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-xmark" id="close" onclick="closemenu()"></i>
+                    <li><a href="#header">Accueil</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="fa-solid fa-bars" id="open" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> developpeuse web</p>
+                <h1>Bonjour, je suis <span>Rockya</span><br>RK </span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p id="p-text">Je suis une développeuse passionnée, en pleine découverte du monde du développement web et mobile. Curieuse et motivée, j’ai commencé à me former sur les technologies du web (HTML, CSS, JavaScript) et à explorer le design d’interfaces utilisateur (UI/UX) pour créer des expériences modernes et conviviales.
 
+Chaque projet est pour moi une occasion d’apprendre, de progresser et de relever de nouveaux défis. J’aime transformer une idée en un site ou une application fonctionnelle, en accordant une attention particulière au design, à l’ergonomie et à la qualité du code.
+
+Aujourd’hui, je cherche à enrichir mon expérience en contribuant à des projets concrets — en équipe ou en freelance — afin de continuer à développer mes compétences et à évoluer dans ce métier passionnant.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="show('skills')">Competences</p>
+                        <p class="tab-links" onclick="show('experience')">experience</p>
+                        <p class="tab-links" onclick="show('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                      <ul>
+                            <li><p><span>UI/UX</span><br>Notions de base en design UI/UX</p></li>
+                            <li><p><span>Conception d'applications</span><br>Conception d'applications avec React Native</p></li>
+                            <li><p><span>Conception de sites Web</span><br>Conception de sites Web avec HTML, CSS et JS</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><p><span>2019 - 2021</span><br>Intern at Abbu Tech company.</p></li>
+                            <li><p><span>2021 - 2022</span><br>Junior dev at Ekrant eCommerce.</p></li>
+                            <li><p><span>2022 - Present</span><br>Frontend developer at Musket Technology.</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><p><span>Ecole primaire et humanitaire</span><br>J’ai commencé mon école maternelle à l’école consulaire Patrice Emery Lumumba, à Cabinda en Angola. C’est là que j’ai découvert les premières bases de l’apprentissage, dans un cadre accueillant et structuré.
+
+Ensuite, j’ai poursuivi ma formation humanitaire au Lycée Tuzayana, un internat situé à Kipako, dans le Kongo Central. L’expérience en internat m’a appris la rigueur, l’autonomie et la vie en communauté.</p></li>
+                            <li><p><span>Ecole Universitaire</span><br>Actuellement, je poursuis mon parcours universitaire à l’Université Protestante au Congo (UPC), en première année de Licence (L1) dans le système LMD. Ce cycle marque une nouvelle étape dans mon développement académique et personnel, orienté vers des compétences solides et un avenir professionnel structuré.
+
+---</p></li>
+                            
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------services------------ -->
+    <div id="services">
+        <div class="container">
+            <div class="sub-title">
+                <h1>My Services</h1>
+            </div>
+            <div class="my-service">
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ea illo laudantium dicta repellendus fuga.</p>
+                </div>
+                <div id="mid-div">
+                    <i class="fa-brands fa-app-store"></i>
+                    <h3>App Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, magni. Adipisci, dicta illo sequi fugit similique omnis quibusdam dolorum quis molestiae delectus ut quo.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Website Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi minus reiciendis eaque maxime rem adipisci earum. Ab minima mollitia maxime. Nihil maxime quis in velit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------portfolio-------- -->
+     <div id="portfolio">
+        <div class="container">
+            <h1>My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>App Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reiciendis quasi ab tempora sint est neque perferendis reprehenderit fugiat suscipit repellat cum.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, autem. Sit saepe nobis quisquam iure? Est, quo doloribus.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Shopping Online</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, facilis! Rem dolorum dolores hic nisi sit sed quos ratione suscipit ullam. Minima consequuntur nostrum cum!</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+     </div>
+     <!-- -------contact------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>rockyakimbembe8@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+243 8333228830</p>
+                    <div class="icon-list">
+                        <a href="https://https://www.facebook.com/share/1B25SwwV65/?mibextid=wwXIfr/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com/home?lang=en">
+                            <i class="fa-brands fa-square-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="download-cv btn2">
+                        <a href="./images/Rick-cv.pdf" download>Download CV</a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <form action="#">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="name" placeholder="Your Email" required>
+                        <textarea name="name" id="text-area" placeholder="Your Message" ></textarea>
+                        <button type="submit" id="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>©RK . tous droit réserve</p>
+    </div>
+</body>
+</html>
