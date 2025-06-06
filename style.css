@@ -11,12 +11,13 @@ html{
 body{
     background: #262C3A;
     color: white;
+
 }
 
 /* ----header-------- */
 #header{
-    height: 100vh;
-    background-image: url(./images/background.jpg);
+    height: 110vh;
+    background-color: #262C3A;
     background-size: cover;
     background-position: bottom;
     padding: 10px 0;
@@ -33,7 +34,7 @@ body{
 }
 
 .container nav img{
-    height: 45px;
+    height: 200px;
 }
 
 .container nav ul{
@@ -242,7 +243,7 @@ nav ul li a:hover::after{
 }
 
 .work img{
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
     transition: transform 0.5s;
     display: block;

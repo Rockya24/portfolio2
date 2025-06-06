@@ -1,14 +1,32 @@
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+const tablinks = document.getElementsByClassName('tab-links')
+const tabcontents = document.getElementsByClassName('tab-contents')
 
-hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+// About me
+function show(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove('active-link')
+    }
 
-// Bonus : quand on clique sur un lien, on ferme le menu :
-const links = document.querySelectorAll('.menu a');
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('active');
-    });
-});
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove('active-tab')
+    }
+
+    event.currentTarget.classList.add('active-link')        
+    document.getElementById(tabname).classList.add('active-tab')
+}
+
+
+// small screen (open-close menu)
+window.addEventListener('DOMContentLoaded', ()=>{  
+    const nav = document.getElementById('sidemenu')
+    const open = document.getElementById('open')
+    const close = document.getElementById('close')
+    
+    open.addEventListener('click', ()=>{
+        nav.style.right = '0px'
+    })
+    close.addEventListener('click', ()=>{
+        nav.style.right = '-240px'
+    })
+    
+})
